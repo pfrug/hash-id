@@ -56,6 +56,14 @@ php artisan hashid:regenerate
 
 This will update the `hashid.php` configuration file with new values.
 
+## Running Tests
+
+To run the tests for the package, use the following command:
+
+```bash
+vendor/bin/phpunit --configuration "phpunit.xml" --filter=HashIdTest
+```
+
 ## License
 
 MIT License
