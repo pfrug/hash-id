@@ -1,10 +1,11 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests;
 
 use Pfrug\HashId\HashId;
-use Jenssegers\Optimus\Optimus;
+
 use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Optimus\Optimus;
 use PHPUnit\Framework\TestCase;
 
 class HashIdTest extends TestCase
