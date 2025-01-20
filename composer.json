@@ -3,6 +3,7 @@
     "description": "Simple trait for Laravel to encode IDs in URLs, providing a secure and obfuscated way to expose model identifiers",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Pfrug\\HashId\\": "src/"
