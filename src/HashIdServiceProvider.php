@@ -31,7 +31,7 @@ class HashIdServiceProvider extends ServiceProvider
             [
                 __DIR__ . '/../config/hashid.php' => config_path('hashid.php'),
             ],
-            'pfrug-hashid-config'
+            'hashid-config'
         );
     }
 }
