@@ -28,7 +28,7 @@ This will create the `hashid.php` configuration file in the `config` directory.
 ```php
 use Pfrug\HashId;
 
-class User extends Authenticatable
+class Post extends Model
 {
     use HashId;
 }
@@ -39,8 +39,8 @@ class User extends Authenticatable
 In your route model binding, you can now use the encoded ID:
 
 ```php
-Route::get('/user/{user}', function (User $user) {
-    return $user;
+Route::get('/post/{post}', function (Post $post) {
+    return $post;
 });
 ```
 
