@@ -16,18 +16,19 @@ trait HashId
     }
 
     /**
-     * Get the value of the model's route key.
+     * Retrieve the value of the model's route key.
      *
-     * @return mixed
+     * @return int
+     * @throws RuntimeException
      */
     public function getRouteKey()
     {
         $key = $this->getKey();
 
-        if ($this->getKeyType() === 'int' && (is_int($key) || ctype_digit($key))) {
+        if (is_int($key) || ctype_digit($key)) {
             return $this->encodeId($key);
         }
-        throw new RuntimeException('Key should be of type int to encode into a fake id.');
+        throw new RuntimeException('Key must be of type int to encode.');
     }
 
     /**
