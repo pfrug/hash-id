@@ -10,9 +10,17 @@ trait HashId
 {
     protected $optimus;
 
-    public function __construct()
+    /**
+     * Get the Optimus instance.
+     *
+     * @return Optimus
+     */
+    protected function getOptimus(): Optimus
     {
-        $this->optimus = app(Optimus::class);
+        if (!$this->optimus) {
+            $this->optimus = app(Optimus::class);
+        }
+        return $this->optimus;
     }
 
     /**
@@ -57,7 +65,7 @@ trait HashId
      */
     public function encodeId($id)
     {
-        return $this->optimus->encode($id);
+        return $this->getOptimus()->encode($id);
     }
 
     /**
@@ -68,6 +76,6 @@ trait HashId
      */
     public function decodeId($encodedId)
     {
-        return $this->optimus->decode($encodedId);
+        return $this->getOptimus()->decode($encodedId);
     }
 }
